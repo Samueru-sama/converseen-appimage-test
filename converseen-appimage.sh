@@ -8,7 +8,6 @@ URUNTIME="https://raw.githubusercontent.com/pkgforge-dev/Anylinux-AppImages/refs
 SHARUN="https://raw.githubusercontent.com/pkgforge-dev/Anylinux-AppImages/refs/heads/main/useful-tools/quick-sharun.sh"
 
 export ADD_HOOKS="self-updater.bg.hook"
-# The arch package does not have icon lol
 export ICON=/usr/share/icons/hicolor/256x256/apps/converseen.png
 export DESKTOP=/usr/share/applications/net.fasterland.converseen.desktop
 export UPINFO="gh-releases-zsync|${GITHUB_REPOSITORY%/*}|${GITHUB_REPOSITORY#*/}|latest|*$ARCH.AppImage.zsync"
@@ -23,4 +22,3 @@ chmod +x ./quick-sharun
 wget --retry-connrefused --tries=30 "$URUNTIME" -O ./uruntime2appimage
 chmod +x ./uruntime2appimage
 ./uruntime2appimage
-
