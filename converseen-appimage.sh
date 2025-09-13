@@ -16,7 +16,12 @@ export OUTNAME=Converseen-"$VERSION"-anylinux-"$ARCH".AppImage
 # Deploy dependencies
 wget --retry-connrefused --tries=30 "$SHARUN" -O ./quick-sharun
 chmod +x ./quick-sharun
-./quick-sharun /usr/bin/converseen
+./quick-sharun \
+	/usr/bin/converseen               \
+	/usr/lib/libheif/libheif-dav1d.so \
+	/usr/lib/libheif/libheif-rav1e.so \
+	/usr/lib/libheif/libheif-svtenc.so
+echo 'LIBHEIF_PLUGIN_PATH=${SHARUN_DIR}/lib/libheif' >> ./.AppDir/.env
 
 # MAKE APPIMAGE WITH URUNTIME
 wget --retry-connrefused --tries=30 "$URUNTIME" -O ./uruntime2appimage
