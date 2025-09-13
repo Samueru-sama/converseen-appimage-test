@@ -10,6 +10,8 @@ pacman -Syu --noconfirm \
 	converseen       \
 	curl             \
 	git              \
+	libheif          \
+	libjxl           \
 	libxcb           \
 	libxcursor       \
 	libxi            \
