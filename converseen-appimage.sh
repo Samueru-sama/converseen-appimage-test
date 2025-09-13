@@ -21,7 +21,7 @@ chmod +x ./quick-sharun
 	/usr/lib/libheif/libheif-dav1d.so \
 	/usr/lib/libheif/libheif-rav1e.so \
 	/usr/lib/libheif/libheif-svtenc.so
-echo 'LIBHEIF_PLUGIN_PATH=${SHARUN_DIR}/lib/libheif' >> ./.AppDir/.env
+echo 'LIBHEIF_PLUGIN_PATH=${SHARUN_DIR}/lib/libheif' >> ./AppDir/.env
 
 # MAKE APPIMAGE WITH URUNTIME
 wget --retry-connrefused --tries=30 "$URUNTIME" -O ./uruntime2appimage
